@@ -1,0 +1,60 @@
+/* Responsive styles for the portfolio */
+
+@media screen and (max-width: 768px) {
+  /* Hero section */
+  .hero-image {
+    display: none;
+  }
+
+  .hero-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .hero-content {
+    justify-content: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+
+  /* Navigation */
+  nav ul {
+    gap: 1rem;
+  }
+
+  nav ul li {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text .role {
+    font-size: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}

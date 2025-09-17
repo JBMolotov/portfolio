@@ -1,0 +1,195 @@
+/* Retro Poster Styling for Analog Hi-Fi Portfolio */
+
+/* Poster Frame Effect */
+.retro-poster {
+  position: relative;
+  background-color: var(--retro-cream);
+  border: 8px solid var(--wood-medium);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2), 5px 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease;
+}
+
+.retro-poster:hover {
+  transform: rotate(0);
+}
+
+.retro-poster::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/png;base64,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");
+  opacity: 0.05;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+.retro-poster-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Retro Typography Styles */
+.retro-headline {
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: -1px;
+  line-height: 0.9;
+  text-shadow: 3px 3px 0 var(--wood-dark);
+  margin-bottom: 1rem;
+  transform: skew(-5deg, 0);
+}
+
+.retro-subheadline {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--wood-dark);
+  margin-bottom: 1.5rem;
+}
+
+/* Geometric Patterns */
+.retro-pattern-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.retro-pattern-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+}
+
+.retro-pattern-circle:nth-child(1) {
+  width: 150px;
+  height: 150px;
+  bottom: -75px;
+  right: -75px;
+}
+
+.retro-pattern-circle:nth-child(2) {
+  width: 100px;
+  height: 100px;
+  bottom: -50px;
+  right: -50px;
+}
+
+.retro-pattern-circle:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  bottom: -25px;
+  right: -25px;
+}
+
+/* Vintage Dividers */
+.retro-divider {
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  margin: 2rem 0;
+  position: relative;
+}
+
+/* Retro Badge Styles */
+.retro-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--accent);
+  color: var(--light);
+  font-family: var(--font-mono);
+  font-weight: bold;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+  position: relative;
+  margin: 1rem 0;
+  box-shadow: 3px 3px 0 var(--wood-dark);
+}
+
+.retro-badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dashed var(--light);
+  opacity: 0.5;
+  margin: 3px;
+}
+
+/* Vintage Paper Texture */
+.retro-paper {
+  background-color: var(--retro-cream);
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.retro-paper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAD1ElEQVR4nO2c0XHbMAxFQY/gUTxKRslIGaWjZBSP4lHwg3J1PlsUSYkCQOI+5ztH55BE4AKQZPnrC4QQQgghhBBCCCGEEEII8QFs2+tt2/Ywxvi+bdsP7/HczLZtP8cYP8YY38cYD9u2PXmP6SbGGJ/HGH/HGP/e8Wc8e4/vFsYY3yaiXE95e92AOJNxPuXde2zVGWP8zBDjnCfvsVblAHEOeXj2HnM1MoT48hiD96irsCDIwXsOZE6nyZNzbuwLQJxDnjwFyTa1qWR1OvSF52yT+5xrLgAi1XvOZZvcB/eJZJIpxNPKMXPJLqZY2kMOaHOyKOLaHuJGpiCHPHjNrwpGghywnpeFIIffXsxKrEiQQ368Ji2CWPEQ6KBBotmeEgpHu5wO8jQt4CnQFu9IkB9VJ/cVGp4CHXhGccO8hjI8JCsUjhSfh4cgh7zbT/YrlLzNLQ83R0WJBKFZ1mEJUdxjtgOijPk50TgvhxtRTNZpWoybj6o1BDCnq8aYImNMQtBAJWpB7vHdREHfEYlB9wBVPKPYNr+hKSh9VlcVmRYVDfyjgMJDQQ6hvqIiNQQp/AyUbTKQsvvO1lQIfJ1Jr/65QTREKlXx7qBJ3feQO3Af8+YGFlqFe/BXsKhL0XO92Iba3Yu7RhiHq5GwDjzXt8ao2wr/hNHF+QthTRQ3D2EMi/qyLAntuCphORaYGaRF92VxUu1KxrLdbNJy/eSBmZgVogxZjZrV4rBKRVZ5YZU2IAiz+emONWxluJlNmm9YtWUclkxZh+cTV9vqIG1tky7r2ymsZpZ5yPZ8fASr+Gn1FutsefQQkx61vWXGKpw2hO/IuOI9L9mr2hw5xPLfYbI3fhXv+c3EcjdAJJDVCrBSwbm70NxdpGvrp4KvMHcQWAnrcygKO6EwTyyvYJkcS/gEr1Lx9hCEOPnfNRshSk5NLQsXJLqr9BYkOki0ZTHzIFHdagchpPAuNzvW8stcvnmQ0heauWzbK+RBkSlsoNHxxeIOFS2y3wxvCBRokxA0BLqwuYUhlwUYddBkqAPZCrrp5lY4GrUmGrSZigLOJlJYDYWqnQ5lqkKsxaB3eZoJEmVZETQr95kEiYo2w5yWRQLN6A/zuMO6jrgxfbQgiNVzNqdvOVqYFu81Pe5MnyFIlBc1dE0vM4QlSpZnNB+xljmxnAOj+XNLs0NJ9NqFiTMr0a2en4e+Yt18nGnplHLLuYvXVkQ55MmyPDFrL4Edcm49Tp39QZKTp1ifuwghhBBCCCGEEEIIIYQQ4uP4D2lhO3k3V8LYAAAAAElFTkSuQmCC");
+  opacity: 0.07;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Wood Panel Background */
+.wood-panel-bg {
+  background: linear-gradient(
+    90deg,
+    var(--wood-dark) 0%,
+    var(--wood-medium) 15%,
+    var(--wood-light) 30%,
+    var(--wood-medium) 45%,
+    var(--wood-dark) 60%,
+    var(--wood-medium) 75%,
+    var(--wood-light) 90%,
+    var(--wood-medium) 100%
+  );
+  background-size: 200px 100%;
+  position: relative;
+  padding: 2rem;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Torn Paper Effect */
+.torn-edge {
+  position: relative;
+  overflow: hidden;
+}
+
+.torn-edge::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,0 L5,5 L10,0 L15,8 L20,2 L25,6 L30,0 L35,7 L40,3 L45,9 L50,4 L55,10 L60,3 L65,8 L70,2 L75,9 L80,1 L85,8 L90,3 L95,9 L100,4 L105,10 L110,2 L115,8 L120,3 L125,9 L130,4 L135,10 L140,1 L145,9 L150,2 L155,8 L160,0 L165,7 L170,3 L175,8 L180,2 L185,9 L190,4 L195,10 L200,3' stroke='none' fill='%231e1e1e' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 200px 20px;
+  background-repeat: repeat-x;
+}

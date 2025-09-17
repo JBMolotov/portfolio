@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johnny Silva | Desenvolvedor de Automação e IA</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/analog-controls.css" />
+    <link rel="stylesheet" href="css/analog-effects.css" />
+    <link rel="stylesheet" href="css/retro-poster.css" />
+    <link rel="stylesheet" href="css/cassette-player.css" />
+    <link rel="stylesheet" href="css/retro-music-poster.css" />
+    <link rel="stylesheet" href="css/vinyl-projects.css" />
+    <link rel="stylesheet" href="css/main-hero-vinyl.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Substituindo FontAwesome Kit por CDN para evitar problemas de CORS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="analog-overlay"></div>
+    <div class="noise-overlay"></div>
+    <div class="film-grain"></div>
+    <div class="crt-effect"></div>
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1 class="glitch" data-text="JS">JS</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="intro-text">
+              <h3 class="greeting">Olá, eu sou</h3>
+              <h1 class="vintage-text">Johnny Silva</h1>
+              <h2 class="role">Desenvolvedor</h2>
+              <div class="typewriter-container">
+                <h3 class="typewriter">
+                  <span class="typed-text"></span
+                  ><span class="cursor">&nbsp;</span>
+                </h3>
+              </div>
+            </div>
+            <div class="cta-buttons">
+              <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+              <a href="#contato" class="btn btn-outline">Entrar em Contato</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="hero-vinyl-record">
+              <div class="hero-vinyl-label">
+                <div class="hero-vinyl-logo">
+                  <h1 class="glitch" data-text="JS">JS</h1>
+                </div>
+              </div>
+              <div class="hero-vinyl-hole"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="polaroid">
+              <img src="images/eu.png" alt="Eu, bem bonito" />
+              <div class="caption">Esse sou eu</div>
+              <!-- Nem me acho tão bonito assim -->
+            </div>
+          </div>
+          <div class="about-text">
+            <h3>Desenvolvedor de Automação & IA</h3>
+            <p>
+              Olá! Sou Johnny, um desenvolvedor apaixonado por criar soluções
+              tecnológicas que resolvem problemas reais. Com experiência em
+              automação, desenvolvimento FullStack e inteligência artificial
+              generativa.
+            </p>
+            <p>
+              Minha jornada na programação começou com 16, quando entrei no meu
+              primeiro curso na ETEC. Desde então (hoje com 25 ou mais
+              dependendo de quando você está lendo), venho aprimorando minhas
+              habilidades e expandindo meu conhecimento em diversas áreas da
+              tecnologia.
+            </p>
+            <p>
+              Quando não estou codando, gosto de esportes, sair com amigos e
+              trabalhar em projetos pessoais que geralmente só servem para me
+              tirar sorrisos.
+            </p>
+            <div class="personal-info">
+              <div class="info-item">
+                <h4>Experiência</h4>
+                <p>5+ Anos</p>
+              </div>
+              <div class="info-item">
+                <h4>Projetos</h4>
+                <p>20+</p>
+              </div>
+              <div class="info-item">
+                <h4>Fatias de pizza</h4>
+                <p>10+ (em rodízio)</p>
+              </div>
+            </div>
+            <!-- <a href="#" class="btn btn-secondary">Baixar CV</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="vinyl-projects">
+      <div class="container">
+        <h2 class="section-title">Projetos Selecionados</h2>
+        <div class="vinyl-collection">
+          <!-- Vinyl Box 1 -->
+          <div class="vinyl-box">
+            <div class="vinyl-record"></div>
+            <div class="vinyl-sleeve">
+              <div class="vinyl-cover">
+                <img
+                  src="images/ecotutor.png"
+                  alt="EcoTutor Plataforma de Tutoria Sustentável"
+                />
+              </div>
+            </div>
+
+            <div class="vinyl-info">
+              <h3>EcoTutor</h3>
+              <p class="vinyl-project-description">
+                EcoTutor é uma plataforma de tutoria personalizada para hábitos
+                sustentáveis que combina planos personalizados, quizzes e
+                trilhas de aprendizado com suporte prático para ações
+                sustentáveis.
+              </p>
+              <div class="vinyl-tags">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Flask</span>
+                <span>Embeddings</span>
+                <span>Vector Store</span>
+              </div>
+              <a
+                href="https://github.com/JBMolotov/ecotutor"
+                class="vinyl-button"
+                >Ver Detalhes</a
+              >
+            </div>
+          </div>
+
+          <!-- Vinyl Box 2 -->
+          <div class="vinyl-box">
+            <div class="vinyl-record"></div>
+            <div class="vinyl-sleeve">
+              <div class="vinyl-cover">
+                <img
+                  src="images/supplychain.png"
+                  alt="SupplyChain Smart Contract"
+                />
+              </div>
+            </div>
+
+            <div class="vinyl-info">
+              <h3>SupplyChain Smart Contract</h3>
+              <p class="vinyl-project-description">
+                Contrato inteligente para rastreamento de produtos,
+                movimentações, condições de transporte e transferência de posse
+                na cadeia de suprimentos.
+              </p>
+              <div class="vinyl-tags">
+                <span>TypeScript</span>
+                <span>Hardhat</span>
+                <span>Ethereum</span>
+              </div>
+              <a
+                href="https://github.com/JBMolotov/supplychain-contract"
+                class="vinyl-button"
+                >Ver Detalhes</a
+              >
+            </div>
+          </div>
+
+          <!-- Vinyl Box 3 -->
+          <div class="vinyl-box">
+            <div class="vinyl-record"></div>
+            <div class="vinyl-sleeve">
+              <div class="vinyl-cover">
+                <img src="images/assi-jur.png" alt="Assistente Jurídico" />
+              </div>
+            </div>
+
+            <div class="vinyl-info">
+              <h3>Assistente Jurídico</h3>
+              <p class="vinyl-project-description">
+                Baseado em IA para auxiliar advogados e pessoas interessadas em
+                temas legais, fornecendo respostas precisas e contextuais a
+                partir de uma base de dados de legislação e jurisprudência
+                constantemente atualizada.
+              </p>
+              <div class="vinyl-tags">
+                <span>RAG</span>
+                <span>LLM</span>
+                <span>LangChain</span>
+              </div>
+              <a
+                href="https://github.com/JBMolotov/assistente-juridico"
+                class="vinyl-button"
+                >Ver Detalhes</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="vinyl-view-all">
+          <a
+            href="https://github.com/JBMolotov?tab=repositories"
+            class="vinyl-view-all-button"
+            >Ver Todos os Projetos</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="retro-music-contact">
+      <div class="container">
+        <div class="retro-music-poster">
+          <div class="retro-title-container">
+            <h2 class="retro-small">Entre em</h2>
+            <h1 class="retro-large">Contato</h1>
+          </div>
+
+          <div class="retro-cassette-container">
+            <div class="retro-cassette">
+              <!-- Cassette Screws -->
+              <div class="cassette-screw top-left"></div>
+              <div class="cassette-screw top-right"></div>
+              <div class="cassette-screw bottom-left"></div>
+              <div class="cassette-screw bottom-right"></div>
+
+              <!-- Cassette Holes -->
+              <div class="cassette-bump"></div>
+              <div class="cassette-hole left"></div>
+              <div class="cassette-hole right"></div>
+
+              <!-- Cassette Label -->
+              <div class="retro-cassette-label">
+                <h3 class="cassette-title">ME MANDA UM OI</h3>
+              </div>
+
+              <!-- Cassette Reels -->
+              <div class="retro-cassette-reels">
+                <div class="retro-cassette-reels-glass"></div>
+                <div class="retro-reel left"></div>
+                <div class="retro-reel right"></div>
+              </div>
+
+              <a href="mailto:johnnyy.br@gmail.com" class="contact-email">
+                <i class="fas fa-envelope"></i> johnnyy.br@gmail.com
+              </a>
+
+              <div class="cassette-social-links">
+                <a
+                  href="https://www.linkedin.com/in/johnnybs99/"
+                  class="retro-social-link"
+                  title="LinkedIn"
+                >
+                  <img
+                    src="images/linkedin-icon.png"
+                    alt="LinkedIn"
+                    class="social-icon"
+                  />
+                </a>
+                <a
+                  href="https://github.com/JBMolotov"
+                  class="retro-social-link"
+                  title="GitHub"
+                >
+                  <img
+                    src="images/github-icon.png"
+                    alt="GitHub"
+                    class="social-icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/analog-controls.js"></script>
+    <script src="js/analog-effects.js"></script>
+    <script src="js/retro-poster.js"></script>
+    <script src="js/cassette-player.js"></script>
+    <script src="js/retro-music-poster.js"></script>
+    <script src="js/vinyl-projects.js"></script>
+  </body>
+</html>

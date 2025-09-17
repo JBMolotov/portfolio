@@ -1,0 +1,473 @@
+/* Retro Music Poster Style for Contact Section */
+
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap");
+
+.retro-music-contact {
+  position: relative;
+  background: linear-gradient(135deg, #000 0%, #222 100%);
+  padding: 60px 0;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+/* Diagonal Stripes Background */
+.retro-music-contact::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(217, 165, 102, 0.1),
+    rgba(217, 165, 102, 0.1) 10px,
+    rgba(201, 52, 52, 0.1) 10px,
+    rgba(201, 52, 52, 0.1) 20px
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.retro-music-poster {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* Main Title */
+.retro-title-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.retro-small {
+  font-family: "Space Mono", monospace;
+  font-size: 2.5rem;
+  letter-spacing: 6px;
+  color: var(--primary);
+  margin: 0;
+  line-height: 0.8;
+}
+
+.retro-large {
+  font-family: "Space Mono", monospace;
+  font-size: 7rem;
+  letter-spacing: 4px;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1;
+  transform: perspective(500px) rotateX(10deg);
+}
+
+@media (max-width: 768px) {
+  .retro-small {
+    font-size: 1.8rem;
+  }
+
+  .retro-large {
+    font-size: 4rem;
+  }
+}
+
+/* Cassette Tape */
+.retro-cassette-container {
+  position: relative;
+  margin: 60px auto;
+  transform: rotate(10deg);
+  max-width: 80%;
+}
+
+.retro-cassette {
+  width: 100%;
+  background: #111;
+  aspect-ratio: 3/2;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8),
+    -5px -5px 15px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.retro-cassette::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+/* Cassette Label */
+.retro-cassette-label {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: linear-gradient(
+    135deg,
+    var(--wood-light) 0%,
+    var(--tertiary) 100%
+  );
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cassette-title {
+  font-family: "Anton", sans-serif;
+  color: #111;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0 0 5px;
+}
+
+.cassette-subtitle {
+  font-family: "Space Mono", monospace;
+  color: #111;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cassette-divider {
+  width: 70%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 10px 0;
+}
+
+/* Cassette Reels */
+.retro-cassette-reels {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20% 20%;
+  pointer-events: none;
+}
+
+.retro-cassette-reels-glass {
+  position: absolute;
+  top: 29%;
+  left: 20%;
+  width: 60%;
+  height: 25%;
+  background: rgba(16, 16, 16, 0.9);
+  border-radius: 50px;
+  pointer-events: none;
+}
+
+.retro-reel {
+  width: 100px;
+  height: 100px;
+  aspect-ratio: 1/1;
+  background: #222;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.retro-reel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  background: #444;
+  border-radius: 50%;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+.retro-reel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  height: 10%;
+  background: #777;
+  border-radius: 50%;
+}
+
+/* Cassette Holes and Screws */
+.cassette-screw {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #444;
+  border-radius: 50%;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+.cassette-screw::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 40%;
+  height: 2px;
+  background: #222;
+  transform: translateY(-50%);
+}
+
+.cassette-screw.top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.cassette-screw.top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.cassette-screw.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.cassette-screw.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Cassette Bumps */
+
+.cassette-bump {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 15%;
+  background: #252525;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.8);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+/* Cassette Holes */
+.cassette-hole {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #000;
+  border-radius: 50%;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.cassette-hole.left {
+  bottom: 20%;
+  left: 15%;
+}
+
+.cassette-hole.right {
+  bottom: 20%;
+  right: 15%;
+}
+
+/* Info Banners */
+.info-banner {
+  position: absolute;
+  background: #000;
+  color: #fff;
+  padding: 5px 15px;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  transform: rotate(5deg);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.info-banner.doors-open {
+  top: 30%;
+  right: 10%;
+}
+
+.info-banner.time {
+  top: 37%;
+  right: 5%;
+}
+
+/* Entry Badge */
+.entry-badge {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  width: 70px;
+  height: 70px;
+  background: var(--primary);
+  border: 2px dashed #000;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-15deg);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.entry-badge-text {
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #111;
+  margin: 0;
+  text-align: center;
+}
+
+.entry-badge-price {
+  font-family: "Anton", sans-serif;
+  font-size: 1.2rem;
+  color: #111;
+  margin: 0;
+}
+
+/* Bottom Banner */
+.bottom-banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(40%);
+}
+
+.bottom-banner-text {
+  color: #fff;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0 10px;
+}
+
+/* Contact Info */
+.contact-info-container {
+  position: relative;
+  z-index: 10;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contact-email {
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary);
+  text-decoration: none;
+  display: inline-block;
+  /* margin-bottom: 20px; */
+  padding: 5px 10px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  position: absolute;
+  left: 22%;
+  top: 57%;
+}
+
+.contact-email:hover {
+  background: var(--primary);
+  color: #111;
+  transform: scale(1.15) rotate(-8deg);
+  background: #fff;
+}
+
+/* Social Links */
+.cassette-social-links {
+  margin-top: 50%;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-self: center;
+}
+
+.retro-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+.retro-social-link:hover {
+  transform: scale(1.15) rotate(-8deg);
+  background: #fff;
+}
+
+.social-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .retro-music-poster {
+    padding: 20px;
+  }
+
+  .retro-cassette-container {
+    transform: rotate(5deg);
+    max-width: 90%;
+  }
+
+  .info-banner {
+    font-size: 0.8rem;
+  }
+
+  .entry-badge {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .retro-cassette-container {
+    transform: none;
+    margin: 40px auto;
+  }
+
+  .info-banner.doors-open,
+  .info-banner.time {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 10px auto;
+    display: inline-block;
+  }
+
+  .entry-badge {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin: 20px auto;
+  }
+}

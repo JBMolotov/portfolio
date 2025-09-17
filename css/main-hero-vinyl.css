@@ -1,0 +1,124 @@
+/* Hero Vinyl Record Styling */
+
+.hero-vinyl-record {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #000000, #333333);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: heroSpin 20s linear infinite;
+  transform: translateY(-10px);
+}
+
+.hero-vinyl-record::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    #000000,
+    #000000 2px,
+    #333333 3px,
+    #333333 4px
+  );
+  pointer-events: none;
+}
+
+.hero-vinyl-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1.2;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  padding: 10px;
+}
+
+/* Hero vinyl logo styling */
+.hero-vinyl-logo {
+  margin-bottom: 8px;
+  transform: scale(1.4);
+}
+
+.hero-vinyl-logo .glitch {
+  font-size: 7rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  z-index: 4;
+}
+
+.hero-vinyl-logo .glitch::before {
+  text-shadow: -1px 0 var(--accent);
+  clip: rect(24px, 150px, 36px, 0);
+  z-index: 3;
+}
+
+.hero-vinyl-logo .glitch::after {
+  text-shadow: -1px 0 var(--accent-dark);
+  clip: rect(24px, 150px, 36px, 0);
+  z-index: 3;
+}
+
+/* Hero vinyl specific shine effect - removed */
+.hero-vinyl-record::after {
+  content: none;
+}
+
+/* Specific spin animation for hero vinyl */
+@keyframes heroSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Reflection removed */
+.hero-vinyl-reflection {
+  display: none;
+}
+
+/* Hole in the center */
+.hero-vinyl-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4%;
+  height: 4%;
+  background: #000;
+  border-radius: 50%;
+  box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.3);
+  z-index: 3;
+}
+
+/* Pause animation on hover for interactive feel */
+/* .hero-image:hover .hero-vinyl-record {
+  animation-play-state: paused;
+} */
