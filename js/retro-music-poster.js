@@ -53,4 +53,32 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }, 5000);
   }
+
+  // Copy email button (mobile)
+  const copyBtn = document.querySelector(".copy-email-btn");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      const email =
+        copyBtn.getAttribute("data-email") || "johnnyy.br@gmail.com";
+      try {
+        await navigator.clipboard.writeText(email);
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+        setTimeout(() => {
+          copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar e-mail';
+        }, 2000);
+      } catch (e) {
+        // Fallback
+        const input = document.createElement("input");
+        input.value = email;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand("copy");
+        document.body.removeChild(input);
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+        setTimeout(() => {
+          copyBtn.innerHTML = '<i class="fas fa-copy"></i> Copiar e-mail';
+        }, 2000);
+      }
+    });
+  }
 });

@@ -1,3 +1,14 @@
+/* Mobile tweaks to prevent header overlap and clipping */
+@media (max-width: 480px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .hero {
+    margin-top: 10px;
+  }
+}
 /* Analog Hi-Fi Style Portfolio - Johnny Silva */
 
 :root {
@@ -993,6 +1004,7 @@ footer {
 
   .personal-info {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .contact-content {

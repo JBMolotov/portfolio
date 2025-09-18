@@ -132,6 +132,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", updateActiveNav);
 
+  // Mobile: hide nav items on scroll down, show on scroll up (keep only logo)
+  let lastScrollY = window.scrollY;
+  const headerEl = document.querySelector("header");
+  function toggleMobileNavVisibility() {
+    const isMobile = window.matchMedia("(max-width: 480px)").matches;
+    if (!headerEl || !isMobile) {
+      if (headerEl) headerEl.classList.remove("hide-nav");
+      return;
+    }
+    const currentY = window.scrollY;
+    if (currentY > lastScrollY && currentY > 50) {
+      // Scrolling down
+      headerEl.classList.add("hide-nav");
+    } else {
+      // Scrolling up or near top
+      headerEl.classList.remove("hide-nav");
+    }
+    lastScrollY = currentY;
+  }
+
+  window.addEventListener("scroll", toggleMobileNavVisibility, {
+    passive: true,
+  });
+  window.addEventListener("resize", toggleMobileNavVisibility);
+  toggleMobileNavVisibility();
+
   // Form submission handling
   const contactForm = document.getElementById("contactForm");
 

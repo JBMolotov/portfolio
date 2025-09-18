@@ -72,6 +72,16 @@
   z-index: 4;
 }
 
+@media (max-width: 480px) {
+  .hero-vinyl-logo {
+    transform: scale(1);
+  }
+
+  .hero-vinyl-logo .glitch {
+    font-size: 5rem;
+  }
+}
+
 .hero-vinyl-logo .glitch::before {
   text-shadow: -1px 0 var(--accent);
   clip: rect(24px, 150px, 36px, 0);

@@ -1,7 +1,26 @@
 /* Responsive styles for the portfolio */
 
+@media screen and (max-width: 992px) {
+  /* Ajustes gerais para telas de tablets */
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   /* Hero section */
+  .hero {
+    padding-top: 8rem; /* Adiciona mais espaço entre o hero e o header */
+  }
+
   .hero-image {
     display: none;
   }
@@ -39,22 +58,117 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .hero-text h1 {
+@media (max-width: 480px) {
+  .hero {
+    padding: 50px 15px;
+    padding-top: 140px; /* Mais espaço para não colar no menu fixo */
+  }
+
+  .hero-content h1 {
     font-size: 2.5rem;
   }
 
-  .hero-text .role {
-    font-size: 1.5rem;
+  .hero-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
   }
 
-  .cta-buttons {
+  .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  .nav-links li {
+    margin-left: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* Evita corte horizontal e dá respiro lateral */
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  .about {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+    font-size: 1.9rem;
+    line-height: 1.1;
+    padding: 0 8px;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  .about-content {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+  }
+
+  .about-text,
+  .about-image {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    overflow: visible;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .polaroid {
+    width: 100%;
+    max-width: none;
+  }
+
+  .about-image {
+    flex: 0 0 100%;
+  }
+
+  .about-image .polaroid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
   }
 
   .btn {
-    width: 100%;
-    text-align: center;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Oculta navegação no scroll down em mobile, mantendo apenas o logo */
+  header.hide-nav nav {
+    display: none;
+  }
+
+  header.hide-nav {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
   }
 }
