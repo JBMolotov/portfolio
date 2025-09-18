@@ -18,7 +18,8 @@
 @media screen and (max-width: 768px) {
   /* Hero section */
   .hero {
-    padding-top: 8rem; /* Adiciona mais espaço entre o hero e o header */
+  padding-top: 8rem; /* Adiciona mais espaço entre o hero e o header */
+  overflow: hidden; /* corta o disco se ultrapassar */
   }
 
   .hero-image {

@@ -138,7 +138,7 @@ body::before {
   pointer-events: none;
   z-index: 1001;
   opacity: 0.3;
-  animation: scan 8s linear infinite;
+  /* animation: scan 8s linear infinite; */
 }
 
 @keyframes scan {
@@ -355,6 +355,7 @@ nav ul li a.active {
 .hero {
   position: relative;
   min-height: 80vh;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   background-color: var(--dark);
